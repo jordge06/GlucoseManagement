@@ -1,0 +1,30 @@
+Main Item
+(All Visible)
+- Id
+- Date
+- Average Glucose Level
+- Glucose Unit
+- Average Blood Pressure
+- BP Unit
+- Average A1C
+- A1C Unit
+- Average Weight
+- Weight Unit
+
+Subitem
+- Id   (Not Visible)
+- Date (Not Visible)
+- Time
+- Glucose Level
+- Glucose Unit
+- Blood Pressure
+- BP Unit
+- A1C Level
+- A1C Unit
+- Event (Breakfast, Lunch, Dinner)
+- Weight
+- Weight Unit
+- Pills
+- No of Pills
+- Note
+- Tags 

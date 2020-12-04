@@ -1,0 +1,45 @@
+**Glucose Level:
+
+- Sugar Concentration (mmol/L)
+- Time and Date
+- Notes
+
+**Medication Taken:
+
+- Medicine Taken (Look Fort all the Medicine Taken
+- Unit (mg, unit, mL, Tablet)
+- Dosage (mL)
+- Date and Time
+- Notes
+
+**Blood Pressure:
+
+- Systolic Pressure
+- Diastolic Pressure
+- Measured Arm
+- Date and Time
+- Notes
+
+**Food
+- Food Eaten
+- How much do you eat (grams, estimate)
+[Content Breakdown]
+- Non-carbs
+- Carbs
+- Fiber
+- Sugar
+- Date and Time
+- Notes
+
+**Body Weight:
+
+- Weight
+- Date
+- Notes
+
+**Report:
+
+- Graph (Graph both the Blood Pressure and Glucose Level, Both seperated and together)
+- Include the time and date in graph
+- Include the excercise and foods eaten at the same time
+

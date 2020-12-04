@@ -1,0 +1,1 @@
+Click here to enable the new Layout Rendering Engine. If it causes any issue, it can later be disabled using the Settings > Experimental dialog.

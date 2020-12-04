@@ -1,0 +1,9 @@
+SELECT id, AVG(value)
+FROM MyTable
+GROUP BY id
+
+@Query(SELECT * FROM log_table WHERE date = : Sdate)
+LiveData<List<Log>> getByDate(String Sdate);
+
+// GET DATES WITHOUT DUPLICATES
+String query = "SELECT " + KEY_DATE + " FROM " + KEY_TABLE_NAME + " GROUP BY " + KEY_DATE + " HAVING COUNT )(*) >= 1 ORDER BY " + KEY_DATE + " ASC"; 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8eb927</color>
+    <color name="colorPrimaryDark">#D81B60</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="azure">#f1f5f8</color>
+    <color name="white">#ffffff</color>
+    <color name="darkNav">#262626</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="customYellow">#F0AC00</color>
+    <color name="customRed">#E75D32</color>
+    <color name="backgroundWhite">#F2F1F1</color>
+    <color name="bloodPressure">#688ED1</color>
+    <color name="card">#797773</color>
+
+</resources>

@@ -1,0 +1,22 @@
+@Test
+public void insertAndGetUserById() {
+    // Given that we have a user in the data source
+    mDatabase.userDao().insertUser(USER);
+    // When subscribing to the emissions of user
+    mDatabase.userDao()
+             .getUserById(USER.getId())
+             .test()
+             // assertValue asserts that there was only one emission
+             .assertValue(new Predicate<User>() {
+                @Override
+                public boolean test(User user) throws Exception {
+                    // The emitted user is the expected one
+                    return user.getId().equals(USER.getId()) &&
+                      user.getUserName().equals(USER.getUserName());
+                }
+            });
+}
+
+// Android JetPack Navigation
+    implementation "androidx.navigation:navigation-fragment:"2.3.0""
+    implementation "androidx.navigation:navigation-ui:"2.3.0""

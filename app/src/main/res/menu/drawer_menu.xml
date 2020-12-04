@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <!--
+        this xml file is for the overall behaviour of drawer menu
+        this also where we add all the item that can be found in menu
+        android:checkableBehavior="single" so that you can only select once a time in the drawer menu
+        -->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_logbook"
+            android:icon="@drawable/ic_logbook"
+            android:title="@string/fragment_tag_logbook" />
+
+        <item
+            android:id="@+id/nav_connect"
+            android:icon="@drawable/ic_connect"
+            android:title="@string/fragment_tag_connect" />
+
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/fragment_tag_report" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/fragment_tag_settings" />
+
+        <item
+            android:id="@+id/nav_manual"
+            android:icon="@drawable/ic_manual"
+            android:title="@string/fragment_tag_manual" />
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback"
+            android:title="@string/fragment_tag_feedback" />
+
+    </group>
+
+
+</menu>

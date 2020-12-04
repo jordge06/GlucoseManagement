@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_logbook">
+
+    <fragment
+        android:id="@id/nav_logbook"
+        android:name="com.example.acer.glucosemanagement.Fragments.LogbookFragment"
+        android:label="@string/fragment_tag_logbook" >
+        <action
+            android:id="@+id/action_nav_logbook_to_addEntryFragment"
+            app:destination="@id/addEntryFragment" />
+        <action
+            android:id="@+id/action_nav_logbook_to_displayEntryFragment"
+            app:destination="@id/displayEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@id/nav_connect"
+        android:name="com.example.acer.glucosemanagement.Fragments.ConnectFragment"
+        android:label="@string/fragment_tag_connect" />
+    <fragment
+        android:id="@id/nav_feedback"
+        android:name="com.example.acer.glucosemanagement.Fragments.FeedbackFragment"
+        android:label="@string/fragment_tag_feedback" />
+    <fragment
+        android:id="@id/nav_reports"
+        android:name="com.example.acer.glucosemanagement.Fragments.ReportFragment"
+        android:label="@string/fragment_tag_report" />
+    <fragment
+        android:id="@id/nav_settings"
+        android:name="com.example.acer.glucosemanagement.Fragments.SettingsFragment"
+        android:label="@string/fragment_tag_settings" >
+        <action
+            android:id="@+id/action_nav_settings_to_pillsEntryFragment"
+            app:destination="@id/pillsEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@id/nav_manual"
+        android:name="com.example.acer.glucosemanagement.Fragments.ManualFragment"
+        android:label="@string/fragment_tag_manual" />
+    <fragment
+        android:id="@+id/addEntryFragment"
+        android:name="com.example.acer.glucosemanagement.Fragments.AddEntryFragment"
+        android:label="AddEntryFragment" >
+        <action
+            android:id="@+id/action_addEntryFragment_to_nav_logbook"
+            app:destination="@id/nav_logbook" />
+        <action
+            android:id="@+id/action_addEntryFragment_to_pillsEntryFragmentWithArgs"
+            app:destination="@id/pillsEntryFragmentWithArgs" />
+        <action
+            android:id="@+id/action_addEntryFragment_to_bloodPressureInputDialog"
+            app:destination="@id/bloodPressureInputDialog" />
+        <action
+            android:id="@+id/action_addEntryFragment_to_pillsSelectDialog"
+            app:destination="@id/pillsSelectDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayEntryFragment"
+        android:name="com.example.acer.glucosemanagement.Fragments.DisplayEntryFragment"
+        android:label="DisplayEntryFragment" >
+        <action
+            android:id="@+id/action_displayEntryFragment_to_addEntryFragment"
+            app:destination="@id/addEntryFragment" />
+        <action
+            android:id="@+id/action_displayEntryFragment_to_nav_logbook"
+            app:destination="@id/nav_logbook" />
+    </fragment>
+    <fragment
+        android:id="@+id/pillsEntryFragment"
+        android:name="com.example.acer.glucosemanagement.Fragments.PillsEntryFragment"
+        android:label="PillsEntryFragment" >
+        <action
+            android:id="@+id/action_pillsEntryFragment_to_nav_settings"
+            app:destination="@id/nav_settings"
+            app:popUpTo="@id/nav_logbook" />
+    </fragment>
+    <fragment
+        android:id="@+id/pillsEntryFragmentWithArgs"
+        android:name="com.example.acer.glucosemanagement.Fragments.PillsEntryFragmentWithArgs"
+        android:label="PillsEntryFragmentWithArgs" >
+        <action
+            android:id="@+id/action_pillsEntryFragmentWithArgs_to_addEntryFragment"
+            app:destination="@id/addEntryFragment"
+            app:popUpTo="@id/nav_logbook" />
+    </fragment>
+    <fragment
+        android:id="@+id/bloodPressureInputDialog"
+        android:name="com.example.acer.glucosemanagement.Fragments.BloodPressureInputDialog"
+        android:label="BloodPressureInputDialog" />
+    <fragment
+        android:id="@+id/pillsSelectDialog"
+        android:name="com.example.acer.glucosemanagement.Fragments.PillsSelectDialog"
+        android:label="PillsSelectDialog" />
+</navigation>

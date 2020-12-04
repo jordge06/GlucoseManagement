@@ -1,0 +1,45 @@
+chart.getDescription().setEnabled(false);
+
+xAxis.setTextSize(...) for XAxis
+
+dataSet.setValueTextSize(...) for data values
+
+mScrollView.post(new Runnable() { 
+        public void run() { 
+             mScrollView.fullScroll(mScrollView.FOCUS_DOWN);
+        } 
+});
+
+mScrollView.post(new Runnable() { 
+        public void run() { 
+             mScrollView.scrollTo(0, mScrollView.getBottom());
+        } 
+});
+
+//////////////////////////////No dim dialog fragment
+///////////////////////////// Solution 1
+What works for me is to adjust the WinowManager.LayoutParams in onStart() of the DialogFragment:
+
+@Override public void onStart() {
+    super.onStart();
+
+    Window window = getDialog().getWindow();
+    WindowManager.LayoutParams windowParams = window.getAttributes();
+    windowParams.dimAmount = 0.90f;
+    windowParams.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+    window.setAttributes(windowParams);
+}
+
+////////////////////// Solution 2
+
+@Override
+public Dialog onCreateDialog(Bundle savedInstanceState) {
+    Dialog dialog = super.onCreateDialog(savedInstanceState);
+
+    //set the dialog to non-modal and disable dim out fragment behind
+    Window window = dialog.getWindow();
+    window.setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
+            WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
+    window.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+    return dialog;
+}

@@ -1,0 +1,17 @@
+- room
+
+def room_version = "2.2.5"
+
+implementation "androidx.room:room-runtime:$room_version"
+annotationProcessor "androidx.room:room-compiler:$room_version"
+
+-lifecycle
+
+def lifecycle_version = "2.2.0"
+
+implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+noteViewModel=new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(NoteViewModel.class);
+
+

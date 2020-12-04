@@ -1,0 +1,19 @@
+
+/* Pedometer
+Calories Burned = #steps * .04 * BF * AF * SF
+
+BF, AF, and SF are the bmi, age, and speed factor
+
+Average Speedfactor is 3.0 mph
+
+BMI = kg/m2 where kg is a person’s weight in kilograms and m2 is their height in metres squared.
+
+.04 is the average calories burned per step.
+******/
+
+/*Importing BCrypt
+Goto to project 
+Create a Directory named libs(depends on you)
+Paste there the library;
+Add the repositories and dependencies
+******/

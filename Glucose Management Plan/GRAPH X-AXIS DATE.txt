@@ -1,0 +1,55 @@
+1) Use IAxisValueFormatter
+IAxisValueFormatter theFormatYouWant= new TheFormatYouWant();
+
+2) Create a formatter by implementing IAxisValueFormatter
+
+public class TheFormatYouWant implements IAxisValueFormatter {
+@override
+public String getFormattedValue(float value, AxisBase axis) {
+
+    Date date = new Date((long)value);
+    //Specify the format you'd like
+    SimpleDateFormat sdf = new SimpleDateFormat("MM/dd", Locale.ENGLISH);
+    return sdf.format(date);
+
+}
+}
+3) Set Format to XAxis
+After
+yValsCandleStick.add(timestamp, float1, float2, foat3, float4);
+
+Set the format for the timestamps
+
+XAxis xAxis = candleStickChart.getXAxis();
+xAxis.setValueFormatter(theFormatYouWant);
+The above works with the following dependencies
+
+implementation 'com.github.PhilJay:MPAndroidChart-Realm:v3.0.3@aar'
+implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+// Another Solution
+
+Try the following.
+
+To set the X Axis
+
+ XAxis xAxis = mChart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setValueFormatter(new MyXAxisValueFormatter());
+        xAxis.setLabelsToSkip(0);
+Create a new class MyXAxisValueFormatter implement XAxisValueFormatter
+
+public class MyXAxisValueFormatter implements XAxisValueFormatter {
+
+@Override
+public String getXValue(String dateInMillisecons, int index, ViewPortHandler viewPortHandler) {
+    try {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM");
+        return sdf.format(new Date(Long.parseLong(dateInMillisecons)));
+
+    } catch (Exception e) {
+
+        return  dateInMillisecons;
+    }
+}

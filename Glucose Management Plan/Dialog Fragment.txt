@@ -1,0 +1,84 @@
+compile 'com.github.aakira:expandable-layout:1.6.0@aar'
+
+// Dialog Fragment Style
+
+//setOnValueChangeListener
+
+<style name="CustomDialog" parent="AppTheme" >
+  <item name="android:windowNoTitle">true</item>
+  <item name="android:windowFullscreen">true</item>
+  <item name="android:windowIsFloating">true</item>
+  <item name="android:windowCloseOnTouchOutside">true</item>
+</style>
+
+// Dialog Fragment
+
+@Override public void onCreate(@Nullable Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  setStyle(DialogFragment.STYLE_NORMAL, R.style.CustomDialog);
+}
+
+@Override public void onStart() {
+  super.onStart();
+  getDialog().getWindow()
+    .setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+        WindowManager.LayoutParams.MATCH_PARENT);
+}
+
+//--------------------------------------------- Other Method
+
+// Displaying Dialog Fragment like this
+
+SampleDialogFragment sampleDialogFragment = new SampleDialogFragment();
+SampleDialogFragment.setStyle(DialogFragment.STYLE_NO_FRAME, 0);
+SampleDialogFragment.show(getActivity().getSupportFragmentManager(), "sometag");
+
+// in Dialog Fragment
+
+@Override
+public void onStart() {
+  super.onStart();
+  getDialog().getWindow()
+         .setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
+}
+
+//----------------------------- For Number Picker
+
+// Setup String Array for the Number Picker to display
+// IList is an ArrayList
+String[] data = new String[IList.size()];
+        data = IList.toArray(data);
+
+        numberPicker.setMinValue(0);
+        numberPicker.setMaxValue(data.length - 1);
+        numberPicker.setDisplayedValues(data);
+        numberPicker.setValue(0);
+        numberPicker.setWrapSelectorWheel(false);
+
+//----------------------------- Or like this
+
+String[] data = {String.valueOf( IList )};
+
+//----------------------Position Dialog at the Bottom
+
+@Override
+  public Dialog onCreateDialog(Bundle savedInstanceState) {
+    // With a theme-free constructor, the dialog border is still several millimeters away from the screen.
+    // Dialog dialog = new Dialog(getActivity());
+    Dialog dialog = new Dialog(getActivity(), R.style.CustomDatePickerDialog);
+    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // must be called before set content
+    dialog.setContentView(R.layout.dialog_datepicker);
+    dialog.setCanceledOnTouchOutside(true);
+    
+    // Set the width to the screen width, close to the bottom of the screen.
+    Window window = dialog.getWindow();
+    WindowManager.LayoutParams wlp = window.getAttributes();
+    wlp.gravity = Gravity.BOTTOM;
+    wlp.width = WindowManager.LayoutParams.MATCH_PARENT;
+    window.setAttributes(wlp);
+ 
+    return dialog;
+  }
+
+
+

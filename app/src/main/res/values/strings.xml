@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Glucose Management</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="blood_pressure_unit">mm/Hg</string>
+
+    <string name="fragment_tag_logbook">Logbook</string>
+    <string name="fragment_tag_report">Reports</string>
+    <string name="fragment_tag_settings">Profile and Settings</string>
+    <string name="fragment_tag_connect">Connection</string>
+    <string name="fragment_tag_feedback">Support and Feedback</string>
+    <string name="fragment_tag_manual">User Manual</string>
+    <string name="fragment_tag_display_item">Display Item</string>
+    <string name="btn_savePillsEntry">SAVE</string>
+    <string name="li_bloodPressure">BloodPressure</string>
+    <string name="btn_saveAllEntry">SAVE</string>
+    <string name="btn_saveUpdateEntry">UPDATE</string>
+    <string name="btn_addEntry">Add Entry</string>
+    <string name="btn_addPill">Add Pill</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_save_settings">Save Settings</string>
+    <string name="btn_done">Done</string>
+    <string name="txt_pills">Open Pill Fragment</string>
+
+    <string name="KEY_ENTRY_VALUE">entryValue</string>
+    <string name="KEY_ENTRY_KEY">entryKey</string>
+
+    <string name="KEY_VALUE">Values</string>
+    <string name="KEY_UNIT">Units</string>
+    <string name="KEY_TIME">Time</string>
+    <string name="KEY_DATE">Date</string>
+
+
+    <string name="KEY_ITEM_ID">Item Id</string>
+    <string name="KEY_PILLS_NAME">Pills Name</string>
+    <string name="KEY_PILLS_AMOUNT">Pills Amount</string>
+
+    <string name="KEY_USER_ID">userId</string>
+    <string name="KEY_SUGAR_LEVEL">userSugarLevel</string>
+    <string name="KEY_BLOOD_PRESSURE">userBloodPressure</string>
+    <string name="KEY_A1C_LEVEL">userA1CLevel</string>
+
+
+    <string name="KEY_SHARED_PREFS">sharedPrefsKey</string>
+    <string name="KEY_A1C_SETTINGS">sharedPrefsA1c</string>
+    <string name="KEY_WEIGHT_SETTINGS">sharedPrefsWeight</string>
+    <string name="KEY_BLOOD_SUGAR_SETTINGS">sharedPrefsBloodSugar</string>
+
+    <string name="intent_message">intent_message</string>
+
+    <string-array name="graphDataType">
+        <item>Glucose Level</item>
+        <item>Systolic Pressure</item>
+        <item>Diastolic Pressure</item>
+        <item>A1C Level</item>
+    </string-array>
+
+    <string-array name="graphDataGroup">
+        <item>All Records</item>
+        <item>Average per Day</item>
+        <item>Average Per Week</item>
+        <item>Average Per Month</item>
+    </string-array>
+
+    <string-array name="bloodSugarUnit">
+        <item>mg/dL</item>
+        <item>mmol/L</item>
+    </string-array>
+
+    <string-array name="weightUnit">
+        <item>kg</item>
+        <item>lbs</item>
+    </string-array>
+
+    <string-array name="a1cUnit">
+        <item>Percent</item>
+        <item>mmol/mol</item>
+    </string-array>
+
+    <string-array name="event">
+        <item> </item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
+
+</resources>

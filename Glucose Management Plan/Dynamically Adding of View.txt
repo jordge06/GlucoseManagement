@@ -1,0 +1,30 @@
+public void Add_Line() {
+    LinearLayout ll = (LinearLayout)findViewById(R.id.linearLayoutDecisions);
+    // add edittext
+    EditText et = new EditText(this);
+    LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+    et.setLayoutParams(p);
+    et.setText("Text");
+    et.setId(numberOfLines + 1);
+    ll.addView(et);
+    numberOfLines++;
+}
+
+public void getAnswer() {
+    String[] options = new String[3];
+
+    EditText text = (EditText)findViewById(R.id.editText2);
+    options[0] = text.getText().toString();
+
+    text = (EditText)findViewById(R.id.editText3);
+    options[1] = text.getText().toString();
+
+    text = (EditText)findViewById(R.id.editText4);
+    options[2] = text.getText().toString();
+
+    int number = (int)(Math.random() * 3);
+    String answer = options[number];
+
+    TextView answerBox = (TextView)findViewById(R.id.textView7);
+    answerBox.setText(answer);
+}

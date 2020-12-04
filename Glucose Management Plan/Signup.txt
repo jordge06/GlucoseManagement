@@ -1,0 +1,5 @@
+Username
+Email
+Password
+Confirm Pass
+Age

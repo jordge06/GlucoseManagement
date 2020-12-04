@@ -1,0 +1,28 @@
+for (int i = 0; i < array.size(); i++) {
+    EditText editText = new EditText(this);
+    LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,     ViewGroup.LayoutParams.WRAP_CONTENT);
+    et.setLayoutParams(p);
+    et.setText("Text");
+    holder.addView(editText);
+}
+
+- Number Picker
+https://www.zoftino.com/android-numberpicker-dialog-example
+
+SELECT CustomerID, Country FROM (
+SELECT * FROM Customers WHERE Country = 'France'
+)
+
+
+String mainChapterNumber = chapterNumber.substring(0,chapterNumber.indexOf("."));
+
+String mainChapterNumber = Iterables.get(Splitter.on('.').split(chapterNumber), 0);
+
+This has the advantage of not using the regular expression machinery (which is not lightweight, don't use the accepted solution in a loop).
+
+For example, you could do:
+
+String result = input.split("-")[0];
+or
+
+String result = input.substring(0, input.indexOf("-"));

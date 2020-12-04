@@ -1,0 +1,9 @@
+On every click on the recyclerview pass the whole array on the second activity.
+Then on second activity iterate throught that then display all those items accordingly.
+You can use a recyclerview (seems hard) or just dynamically add a view using the codes in 
+"Add a view through a button click.text"
+This view that you created using the button click is called dynamic view
+Use a linearlayout or gridlayout as a container for the dynamically add views. 
+
+see link for adding dynamic views:
+https://www.youtube.com/watch?v=vaxFjJj6dsk

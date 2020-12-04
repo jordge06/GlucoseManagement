@@ -1,0 +1,3 @@
+Popular Movies App: Build a cloud-connected app that lets users browse popular movies, browse trailers, and mark their favorites, using real data from a third party API.
+Baking App: Create an app to view video walkthroughs of recipes. In this project, you’ll handle media loading, verify your user interfaces with UI tests, integrate third-party libraries, and provide a complete UX with home screen widget.
+Capstone Project: Own the creation of your own Android app, from design to production, and publish your app to Google Play.

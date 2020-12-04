@@ -1,0 +1,33 @@
+    private LinearLayout mLayout;
+private EditText mEditText;
+private Button mButton;
+
+@Override
+public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main);
+    mLayout = (LinearLayout) findViewById(R.id.linearLayout);
+    mEditText = (EditText) findViewById(R.id.editText);
+    mButton = (Button) findViewById(R.id.button);
+    mButton.setOnClickListener(onClick());
+    TextView textView = new TextView(this);
+    textView.setText("New text");
+}
+
+private OnClickListener onClick() {
+    return new OnClickListener() {
+
+        @Override
+        public void onClick(View v) {
+            mLayout.addView(createNewTextView(mEditText.getText().toString()));
+        }
+    };
+}
+
+private TextView createNewTextView(String text) {
+    final LayoutParams lparams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+    final TextView textView = new TextView(this);
+    textView.setLayoutParams(lparams);
+    textView.setText("New text: " + text);
+    return textView;
+}
