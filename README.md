@@ -12,6 +12,8 @@
   - ViewModel
   - Room Persistence
   - Asynchtask (Currently Updating to RX Java)
+  - MP Android Chart by Phil Jay (https://github.com/PhilJay/MPAndroidChart)
+  - Expandable Layout by Cachapa (https://github.com/cachapa/ExpandableLayout)
   
 ### Design Architecture
   - MVVM
