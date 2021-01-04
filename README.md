@@ -11,7 +11,7 @@
   - Livedata
   - ViewModel
   - Room Persistence
-  - Asynchtask
+  - Asynchtask (Currently Updating to RX Java)
   
 ### Design Architecture
   - MVVM
